@@ -1,0 +1,193 @@
+================================================================
+NEWAPP — TODO LIST COMPLÈTE (React JS natif + PrestaShop API)
+================================================================
+Évaluation P17 — Mai 2026
+================================================================
+
+PHASE 0 : SETUP PROJET
+================================================================
+[x] Initialiser projet React (Vite --template react) en JavaScript pur
+[x] Installer dépendances frontend : axios, react-router-dom
+[x] Installer dépendances backend : express, cors, multer, xml2js, fast-csv, dotenv, adm-zip
+[x] Créer .env (PRESTASHOP_API_URL, PRESTASHOP_API_KEY, PORT, BO_LOGIN, BO_PWD)
+[x] Créer structure dossiers : server/, src/modules/backoffice/, src/modules/frontoffice/, src/utils/, src/context/, src/config/, src/shared/
+[x] Créer server/index.js — proxy Express vers PrestaShop API (gestion CORS + auth Basic)
+[x] Créer server/routes/prestashop.js — routes proxy génériques (GET/POST/PUT/DELETE)
+[x] Créer src/utils/xmlParser.js — XML PrestaShop → objets JS (DOMParser natif)
+[x] Créer src/utils/xmlBuilder.js — objets JS → XML pour POST/PUT PrestaShop
+[x] Créer src/utils/csvParser.js — parse CSV, virgule décimale ("12,5" → 12.5)
+[x] Créer src/utils/dateUtils.js — DD/MM/YYYY ↔ YYYY-MM-DD, validation format
+[x] Créer src/config/api.js — instance axios, baseURL vers proxy
+[x] Tester connexion proxy → GET /api/products → réponse XML valide
+[x] Créer App.jsx avec React Router : routes backoffice (/admin/*) et frontoffice (/*)
+
+PHASE 1 — JOUR 1 : BACKOFFICE
+================================================================
+[x] [J1-1a] src/context/AuthContext.jsx
+    - État authentification backoffice (isAuthenticated, login, logout)
+    - Champs pré-remplis avec identifiants par défaut depuis .env
+
+[x] [J1-1a] src/modules/backoffice/components/LoginPage.jsx
+    - Formulaire login + mot de passe
+    - Champs PRÉ-REMPLIS avec identifiants par défaut
+    - Validation → stocker dans AuthContext
+    - Redirect vers /admin/dashboard après login
+
+[x] [J1-1a] src/shared/components/ProtectedRoute.jsx
+    - Wrapper route : si !isAuthenticated → redirect /admin/login
+
+[x] [J1-1a] src/modules/backoffice/BackofficeLayout.jsx
+    - Layout protégé avec liens vers pages backoffice
+    - Navigation minimale (pas de menu superflu)
+
+[x] [J1-1b] src/modules/backoffice/components/ResetDataPage.jsx
+    - Bouton "Réinitialiser les données"
+    - Confirmation modale avant exécution
+    - DELETE produits/clients/commandes importés via API
+    - Feedback : loading spinner, message succès/erreur
+
+[x] [J1-1c] server/routes/import.js
+    - Route POST /api/import — accepter multipart (multer)
+    - Recevoir 3 CSV + 1 ZIP
+    - Orchestrer import séquentiel
+
+[x] [J1-1c] src/modules/backoffice/components/ImportPage.jsx
+    - 4 zones upload fichiers (ou 1 zone multi-fichiers)
+    - Identification auto par headers CSV (detectFileType)
+    - Validation AVANT import (validateCsv) → bloque si erreurs
+    - Bouton "Importer" → envoi serveur
+    - Barre progression par étape
+    - Résumé : log + erreurs
+
+[x] [J1-1c] Logique import côté serveur :
+    - CATÉGORIES : créer "Akanjo" + "Accessoire" si absentes
+    - PRODUITS (fichier1) :
+      * prix virgule → point, calcul HT = TTC/(1+taxe)
+      * available_date = date_availability_produit (DD/MM/YYYY → YYYY-MM-DD)
+      * active=1, show_price=1, visibility="both"
+    - DÉCLINAISONS (fichier2) :
+      * Joindre par reference
+      * stock_initial → PUT /api/stock_availables
+      * J2: déclinaison SANS combinaison
+    - CLIENTS (fichier3) :
+      * Dédupliquer par email
+      * POST /api/customers + POST /api/addresses (pays=France)
+    - COMMANDES (fichier3) :
+      * Parser [(ref;qté;déclinaison)]
+      * etat vide → POST /api/carts
+      * etat="paiement accepté" → cart + order (current_state=2)
+      * total_shipping=0
+    - IMAGES (ZIP) : dézip + POST /api/images/products/{id}
+
+[x] [J1-1d] src/modules/backoffice/components/OrdersManagePage.jsx
+    - GET /api/orders → tableau
+    - Colonnes : Réf, Client, Date, Total, État
+    - Modifier état : "paiement effectué" / "annulé"
+    - PUT /api/orders/{id} → rafraîchir
+
+PHASE 2 — JOUR 1 : FRONTOFFICE
+================================================================
+[x] [J1-2a] src/modules/frontoffice/components/ProductListPage.jsx
+    - GET /api/products → grille ProductCard
+    - Image, nom, prix TTC EUR, catégorie
+
+[x] [J1-2a] src/shared/components/ProductCard.jsx
+    - Image, nom, prix, catégorie
+    - Clic → /product/{id}
+    - Badge HOT/NEW intégré
+
+[x] [J1-2a-i] src/modules/frontoffice/components/ProductDetailPage.jsx
+    - Détails complet : images, nom, descriptions, prix
+    - Déclinaisons (info lecture depuis stock_availables)
+    - Sélecteur quantité + "Ajouter au panier"
+    - [J3-4a] Stock disponible affiché (En stock / Rupture)
+
+[x] [J1-2b-i] src/context/CartContext.jsx
+    - items, addItem, removeItem, updateQuantity, clearCart
+    - Persistance localStorage
+
+[x] [J1-2b-i] src/modules/frontoffice/components/CartPage.jsx
+    - Liste items panier, quantité modifiable
+    - Total, bouton "Valider la commande"
+
+[x] [J1-2b-ii] src/modules/frontoffice/components/CheckoutPage.jsx
+    - Récapitulatif + "Paiement à la livraison" (seul choix)
+    - Livraison gratuite (0€)
+    - Confirmer → POST cart + POST order → vider panier
+
+[x] [J1-2c] src/modules/frontoffice/components/MyOrdersPage.jsx
+    - GET /api/orders?filter[id_customer]={id}
+    - Tableau : Réf, Date, Produits, Total, État (badge coloré)
+
+PHASE 3 — JOUR 2 : ENRICHISSEMENTS
+================================================================
+[x] [J2-1b] src/modules/backoffice/components/DashboardPage.jsx
+    - Par jour : nb commandes + montant
+    - Total général
+    - Données depuis GET /api/orders
+
+[x] [J2-2a] src/modules/frontoffice/components/UserSelectPage.jsx
+    - NOUVELLE page d'accueil (route /)
+    - Liste utilisateurs + option "Anonyme"
+    - Clic → UserContext → redirect /products
+
+[x] [J2-2a] src/context/UserContext.jsx
+    - { id, name, email, isAnonymous }
+
+[x] [J2-2b] Badges HOT/NEW dans Badge.jsx + ProductCard.jsx
+    - HOT : available_date = hier (≤1 jour)
+    - NEW : available_date dans la semaine (≤7 jours)
+    - Badge visuel overlay
+
+[x] [J2-2c] src/modules/frontoffice/components/SearchPage.jsx
+    - Par nom (texte partiel)
+    - Par catégorie (dropdown)
+    - Par intervalle de prix (min-max)
+
+PHASE 4 — JOUR 3 : VALIDATION IMPORT + STOCK
+================================================================
+[x] [J3-3a] src/utils/importValidation.js
+    - Vérif nom colonnes vs attendu
+    - Vérif format date DD/MM/YYYY
+    - Vérif montants positifs
+    - Retour [{row, column, message}]
+
+[x] [J3-3a] Intégré dans ImportPage.jsx
+    - Valider AVANT import, afficher erreurs, bloquer si erreurs
+
+[x] [J3-3b] server/routes/stock.js
+    - POST /api/stock/add — {productId, delta}
+    - Lire stock, ajouter delta, PUT PrestaShop
+    - Historiser mouvement (stock_history.json)
+
+[x] [J3-3b] src/modules/backoffice/components/StockAddPage.jsx
+    - Dropdown produit, champ delta, bouton ajouter
+    - Feedback ancien/nouveau stock
+
+[x] [J3-3c] src/modules/backoffice/components/StockHistoryPage.jsx
+    - Dropdown produit → tableau évolution journalière
+    - Date | Mouvement | Stock avant | Stock après
+
+[x] [J3-4a] Afficher stock sur ProductDetailPage.jsx
+    - GET stock_availables → "En stock: N" ou "Rupture"
+
+PHASE 5 — VÉRIFICATION EXISTINGAPP
+================================================================
+[ ] Données importées visibles dans BO PrestaShop natif
+[ ] Modifications PrestaShop BO → reflétées dans NewApp
+
+PHASE 6 — FINITIONS
+================================================================
+[ ] Renseigner la vraie clé API PrestaShop dans .env (PRESTASHOP_API_KEY)
+[ ] Test workflow complet bout en bout
+[ ] Format EUR (€) + pays France partout
+[ ] Clean code final
+
+================================================================
+COMMANDES POUR LANCER L'APP
+================================================================
+  Terminal 1 : cd newapp && npm run server   (port 3001)
+  Terminal 2 : cd newapp && npm run dev      (port 5173)
+  Backoffice  : http://localhost:5173/admin/login
+  Frontoffice : http://localhost:5173/
+================================================================

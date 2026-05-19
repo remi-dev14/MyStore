@@ -1,0 +1,974 @@
+-http://localhost/prestashop/api/products:
+    "
+        <prestashop>
+        <products>
+        <product id="20" xlink:href="http://localhost/prestashop/api/products/20"/>
+        <product id="1" xlink:href="http://localhost/prestashop/api/products/1"/>
+        <product id="2" xlink:href="http://localhost/prestashop/api/products/2"/>
+        <product id="3" xlink:href="http://localhost/prestashop/api/products/3"/>
+        <product id="4" xlink:href="http://localhost/prestashop/api/products/4"/>
+        <product id="5" xlink:href="http://localhost/prestashop/api/products/5"/>
+        <product id="6" xlink:href="http://localhost/prestashop/api/products/6"/>
+        <product id="7" xlink:href="http://localhost/prestashop/api/products/7"/>
+        <product id="8" xlink:href="http://localhost/prestashop/api/products/8"/>
+        <product id="9" xlink:href="http://localhost/prestashop/api/products/9"/>
+        <product id="10" xlink:href="http://localhost/prestashop/api/products/10"/>
+        <product id="11" xlink:href="http://localhost/prestashop/api/products/11"/>
+        <product id="12" xlink:href="http://localhost/prestashop/api/products/12"/>
+        <product id="13" xlink:href="http://localhost/prestashop/api/products/13"/>
+        <product id="14" xlink:href="http://localhost/prestashop/api/products/14"/>
+        <product id="15" xlink:href="http://localhost/prestashop/api/products/15"/>
+        <product id="16" xlink:href="http://localhost/prestashop/api/products/16"/>
+        <product id="17" xlink:href="http://localhost/prestashop/api/products/17"/>
+        <product id="18" xlink:href="http://localhost/prestashop/api/products/18"/>
+        <product id="19" xlink:href="http://localhost/prestashop/api/products/19"/>
+        </products>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/products/1:
+    "
+        <prestashop>
+        <product>
+        <id>1</id>
+        <id_manufacturer xlink:href="http://localhost/prestashop/api/manufacturers/1">1</id_manufacturer>
+        <id_supplier xlink:href="http://localhost/prestashop/api/suppliers/1">1</id_supplier>
+        <id_category_default xlink:href="http://localhost/prestashop/api/categories/4">4</id_category_default>
+        <new></new>
+        <cache_default_attribute>1</cache_default_attribute>
+        <id_default_image xlink:href="http://localhost/prestashop/api/images/products/1/1" notFilterable="true">1</id_default_image>
+        <id_default_combination xlink:href="http://localhost/prestashop/api/combinations/1" notFilterable="true">1</id_default_combination>
+        <id_tax_rules_group xlink:href="http://localhost/prestashop/api/tax_rule_groups/1">1</id_tax_rules_group>
+        <position_in_category notFilterable="true">1</position_in_category>
+        <manufacturer_name notFilterable="true">Studio Design</manufacturer_name>
+        <quantity notFilterable="true">0</quantity>
+        <type notFilterable="true">simple</type>
+        <id_shop_default>1</id_shop_default>
+        <reference>demo_1</reference>
+        <supplier_reference></supplier_reference>
+        <location></location>
+        <width>0.000000</width>
+        <height>0.000000</height>
+        <depth>0.000000</depth>
+        <weight>0.300000</weight>
+        <quantity_discount>0</quantity_discount>
+        <ean13></ean13>
+        <isbn></isbn>
+        <upc></upc>
+        <mpn></mpn>
+        <cache_is_pack>0</cache_is_pack>
+        <cache_has_attachments>0</cache_has_attachments>
+        <is_virtual>0</is_virtual>
+        <state>1</state>
+        <additional_delivery_times>1</additional_delivery_times>
+        <delivery_in_stock>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </delivery_in_stock>
+        <delivery_out_stock>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </delivery_out_stock>
+        <product_type>combinations</product_type>
+        <on_sale>0</on_sale>
+        <online_only>0</online_only>
+        <ecotax>0.000000</ecotax>
+        <minimal_quantity>1</minimal_quantity>
+        <low_stock_threshold>0</low_stock_threshold>
+        <low_stock_alert>0</low_stock_alert>
+        <price>23.900000</price>
+        <wholesale_price>5.490000</wholesale_price>
+        <unity></unity>
+        <unit_price>0.000000</unit_price>
+        <unit_price_ratio>0.000000</unit_price_ratio>
+        <additional_shipping_cost>0.000000</additional_shipping_cost>
+        <customizable>0</customizable>
+        <text_fields>0</text_fields>
+        <uploadable_files>0</uploadable_files>
+        <active>1</active>
+        <redirect_type>301-category</redirect_type>
+        <id_type_redirected>0</id_type_redirected>
+        <available_for_order>1</available_for_order>
+        <available_date>0000-00-00</available_date>
+        <show_condition>0</show_condition>
+        <condition>new</condition>
+        <show_price>1</show_price>
+        <indexed>1</indexed>
+        <visibility>both</visibility>
+        <advanced_stock_management>0</advanced_stock_management>
+        <date_add>2026-05-07 09:52:01</date_add>
+        <date_upd>2026-05-07 09:52:01</date_upd>
+        <pack_stock_type>3</pack_stock_type>
+        <meta_description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_description>
+        <meta_keywords>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_keywords>
+        <meta_title>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_title>
+        <link_rewrite>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">hummingbird-printed-t-shirt</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">hummingbird-printed-t-shirt</language>
+        </link_rewrite>
+        <name>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">T-shirt imprimé colibri</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">Hummingbird printed t-shirt</language>
+        </name>
+        <description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">
+        <p>Symbole de légèreté et de délicatesse, le colibri évoque la gaieté et la curiosité. La collection PolyFaune de la marque Studio Design propose des pièces aux coupes basiques et aux visuels colorés inspirés des origamis japonais traditionnels. À porter avec un chino ou un jean. Le procédé d'impression par sublimation garantit la qualité et la longévité des couleurs.</p>
+        </language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">
+        <p>Symbol of lightness and delicacy, the hummingbird evokes curiosity and joy. Studio Design' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>
+        </language>
+        </description>
+        <description_short>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">
+        <p>Coupe classique, col rond, manches courtes. T-shirt en coton pima extra-fin à fibres longues. </p>
+        </language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">
+        <p>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </p> <p></p>
+        </language>
+        </description_short>
+        <available_now>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </available_now>
+        <available_later>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </available_later>
+        <associations>
+        <categories nodeType="category" api="categories">
+        <category xlink:href="http://localhost/prestashop/api/categories/2">
+        <id>2</id>
+        </category>
+        <category xlink:href="http://localhost/prestashop/api/categories/3">
+        <id>3</id>
+        </category>
+        <category xlink:href="http://localhost/prestashop/api/categories/4">
+        <id>4</id>
+        </category>
+        </categories>
+        <images nodeType="image" api="images">
+        <image xlink:href="http://localhost/prestashop/api/images/products/1/1">
+        <id>1</id>
+        </image>
+        <image xlink:href="http://localhost/prestashop/api/images/products/1/2">
+        <id>2</id>
+        </image>
+        </images>
+        <combinations nodeType="combination" api="combinations">
+        <combination xlink:href="http://localhost/prestashop/api/combinations/1">
+        <id>1</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/2">
+        <id>2</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/3">
+        <id>3</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/4">
+        <id>4</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/5">
+        <id>5</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/6">
+        <id>6</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/7">
+        <id>7</id>
+        </combination>
+        <combination xlink:href="http://localhost/prestashop/api/combinations/8">
+        <id>8</id>
+        </combination>
+        </combinations>
+        <product_option_values nodeType="product_option_value" api="product_option_values">
+        <product_option_value xlink:href="http://localhost/prestashop/api/product_option_values/1">
+        <id>1</id>
+        </product_option_value>
+        <product_option_value xlink:href="http://localhost/prestashop/api/product_option_values/8">
+        <id>8</id>
+        </product_option_value>
+        <product_option_value xlink:href="http://localhost/prestashop/api/product_option_values/11">
+        <id>11</id>
+        </product_option_value>
+        <product_option_value xlink:href="http://localhost/prestashop/api/product_option_values/2">
+        <id>2</id>
+        </product_option_value>
+        <product_option_value xlink:href="http://localhost/prestashop/api/product_option_values/3">
+        <id>3</id>
+        </product_option_value>
+        <product_option_value xlink:href="http://localhost/prestashop/api/product_option_values/4">
+        <id>4</id>
+        </product_option_value>
+        </product_option_values>
+        <product_features nodeType="product_feature" api="product_features">
+        <product_feature xlink:href="http://localhost/prestashop/api/product_features/1">
+        <id>1</id>
+        <id_feature_value xlink:href="http://localhost/prestashop/api/product_feature_values/4">4</id_feature_value>
+        </product_feature>
+        <product_feature xlink:href="http://localhost/prestashop/api/product_features/2">
+        <id>2</id>
+        <id_feature_value xlink:href="http://localhost/prestashop/api/product_feature_values/8">8</id_feature_value>
+        </product_feature>
+        </product_features>
+        <tags nodeType="tag" api="tags"/>
+        <stock_availables nodeType="stock_available" api="stock_availables">
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/1">
+        <id>1</id>
+        <id_product_attribute>0</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/20">
+        <id>20</id>
+        <id_product_attribute>1</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/21">
+        <id>21</id>
+        <id_product_attribute>2</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/22">
+        <id>22</id>
+        <id_product_attribute>3</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/23">
+        <id>23</id>
+        <id_product_attribute>4</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/24">
+        <id>24</id>
+        <id_product_attribute>5</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/25">
+        <id>25</id>
+        <id_product_attribute>6</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/26">
+        <id>26</id>
+        <id_product_attribute>7</id_product_attribute>
+        </stock_available>
+        <stock_available xlink:href="http://localhost/prestashop/api/stock_availables/27">
+        <id>27</id>
+        <id_product_attribute>8</id_product_attribute>
+        </stock_available>
+        </stock_availables>
+        <attachments nodeType="attachment" api="attachments"/>
+        <accessories nodeType="product" api="products"/>
+        <product_bundle nodeType="product" api="products"/>
+        </associations>
+        </product>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/categories:
+    "
+        <prestashop>
+        <categories>
+        <category id="1" xlink:href="http://localhost/prestashop/api/categories/1"/>
+        <category id="2" xlink:href="http://localhost/prestashop/api/categories/2"/>
+        <category id="3" xlink:href="http://localhost/prestashop/api/categories/3"/>
+        <category id="6" xlink:href="http://localhost/prestashop/api/categories/6"/>
+        <category id="9" xlink:href="http://localhost/prestashop/api/categories/9"/>
+        <category id="4" xlink:href="http://localhost/prestashop/api/categories/4"/>
+        <category id="5" xlink:href="http://localhost/prestashop/api/categories/5"/>
+        <category id="7" xlink:href="http://localhost/prestashop/api/categories/7"/>
+        <category id="8" xlink:href="http://localhost/prestashop/api/categories/8"/>
+        </categories>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/categories/1:
+    "
+        <prestashop>
+        <category>
+        <id>1</id>
+        <id_parent>0</id_parent>
+        <level_depth>0</level_depth>
+        <nb_products_recursive notFilterable="true">20</nb_products_recursive>
+        <active>1</active>
+        <id_shop_default>1</id_shop_default>
+        <is_root_category>0</is_root_category>
+        <position>0</position>
+        <date_add>2026-05-07 09:49:43</date_add>
+        <date_upd>2026-05-07 09:49:43</date_upd>
+        <name>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">Racine</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">Root</language>
+        </name>
+        <link_rewrite>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">racine</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">root</language>
+        </link_rewrite>
+        <description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </description>
+        <additional_description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </additional_description>
+        <meta_title>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_title>
+        <meta_description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_description>
+        <meta_keywords>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_keywords>
+        <associations>
+        <categories nodeType="category" api="categories">
+        <category xlink:href="http://localhost/prestashop/api/categories/2">
+        <id>2</id>
+        </category>
+        </categories>
+        <products nodeType="product" api="products"/>
+        </associations>
+        </category>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/manufacturers:
+    "
+        <prestashop>
+        <manufacturers>
+        <manufacturer id="1" xlink:href="http://localhost/prestashop/api/manufacturers/1"/>
+        <manufacturer id="2" xlink:href="http://localhost/prestashop/api/manufacturers/2"/>
+        </manufacturers>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/manufacturers/1:
+    " 
+        <prestashop>
+        <manufacturer>
+        <id>1</id>
+        <active>1</active>
+        <link_rewrite notFilterable="true">studio-design</link_rewrite>
+        <name>Studio Design</name>
+        <date_add>2026-05-07 09:52:01</date_add>
+        <date_upd>2026-05-07 09:52:01</date_upd>
+        <description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">
+        <p>Studio Design propose une gamme de produits variée : prêt-à-porter, objets de décoration, accessoires de maison... Depuis sa création en 2012, la marque apporte des idées et des tendances nouvelles à travers ses collections. </p>
+        </language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">
+        <p>Studio Design offers a range of items from ready-to-wear collections to contemporary objects. The brand has been presenting new ideas and trends since its creation in 2012.</p>
+        </language>
+        </description>
+        <short_description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </short_description>
+        <meta_title>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_title>
+        <meta_description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_description>
+        <meta_keywords>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_keywords>
+        <associations>
+        <addresses nodeType="address" api="addresses">
+        <address xlink:href="http://localhost/prestashop/api/addresses/4">
+        <id xlink:href="http://localhost/prestashop/api/addresses/4">4</id>
+        </address>
+        </addresses>
+        </associations>
+        </manufacturer>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/suppliers:
+    "
+        <prestashop>
+        <suppliers>
+        <supplier id="1" xlink:href="http://localhost/prestashop/api/suppliers/1"/>
+        <supplier id="2" xlink:href="http://localhost/prestashop/api/suppliers/2"/>
+        </suppliers>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/suppliers/1:
+    " 
+        <prestashop>
+        <supplier>
+        <id>1</id>
+        <link_rewrite>fashion-supplier</link_rewrite>
+        <name>Fashion supplier</name>
+        <active>1</active>
+        <date_add>2026-05-07 09:52:01</date_add>
+        <date_upd>2026-05-07 09:52:01</date_upd>
+        <description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </description>
+        <meta_title>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_title>
+        <meta_description>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_description>
+        <meta_keywords>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </meta_keywords>
+        </supplier>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/combinations:
+    "
+        <prestashop>
+        <combinations>
+        <combination id="1" xlink:href="http://localhost/prestashop/api/combinations/1"/>
+        <combination id="2" xlink:href="http://localhost/prestashop/api/combinations/2"/>
+        <combination id="3" xlink:href="http://localhost/prestashop/api/combinations/3"/>
+        <combination id="4" xlink:href="http://localhost/prestashop/api/combinations/4"/>
+        <combination id="5" xlink:href="http://localhost/prestashop/api/combinations/5"/>
+        <combination id="6" xlink:href="http://localhost/prestashop/api/combinations/6"/>
+        <combination id="7" xlink:href="http://localhost/prestashop/api/combinations/7"/>
+        <combination id="8" xlink:href="http://localhost/prestashop/api/combinations/8"/>
+        <combination id="9" xlink:href="http://localhost/prestashop/api/combinations/9"/>
+        <combination id="10" xlink:href="http://localhost/prestashop/api/combinations/10"/>
+        <combination id="11" xlink:href="http://localhost/prestashop/api/combinations/11"/>
+        <combination id="12" xlink:href="http://localhost/prestashop/api/combinations/12"/>
+        <combination id="13" xlink:href="http://localhost/prestashop/api/combinations/13"/>
+        <combination id="14" xlink:href="http://localhost/prestashop/api/combinations/14"/>
+        <combination id="15" xlink:href="http://localhost/prestashop/api/combinations/15"/>
+        <combination id="16" xlink:href="http://localhost/prestashop/api/combinations/16"/>
+        <combination id="17" xlink:href="http://localhost/prestashop/api/combinations/17"/>
+        <combination id="18" xlink:href="http://localhost/prestashop/api/combinations/18"/>
+        <combination id="19" xlink:href="http://localhost/prestashop/api/combinations/19"/>
+        <combination id="20" xlink:href="http://localhost/prestashop/api/combinations/20"/>
+        <combination id="21" xlink:href="http://localhost/prestashop/api/combinations/21"/>
+        <combination id="22" xlink:href="http://localhost/prestashop/api/combinations/22"/>
+        <combination id="23" xlink:href="http://localhost/prestashop/api/combinations/23"/>
+        <combination id="24" xlink:href="http://localhost/prestashop/api/combinations/24"/>
+        <combination id="25" xlink:href="http://localhost/prestashop/api/combinations/25"/>
+        <combination id="26" xlink:href="http://localhost/prestashop/api/combinations/26"/>
+        <combination id="27" xlink:href="http://localhost/prestashop/api/combinations/27"/>
+        <combination id="28" xlink:href="http://localhost/prestashop/api/combinations/28"/>
+        <combination id="29" xlink:href="http://localhost/prestashop/api/combinations/29"/>
+        <combination id="30" xlink:href="http://localhost/prestashop/api/combinations/30"/>
+        <combination id="31" xlink:href="http://localhost/prestashop/api/combinations/31"/>
+        <combination id="32" xlink:href="http://localhost/prestashop/api/combinations/32"/>
+        <combination id="33" xlink:href="http://localhost/prestashop/api/combinations/33"/>
+        <combination id="34" xlink:href="http://localhost/prestashop/api/combinations/34"/>
+        <combination id="35" xlink:href="http://localhost/prestashop/api/combinations/35"/>
+        <combination id="36" xlink:href="http://localhost/prestashop/api/combinations/36"/>
+        <combination id="37" xlink:href="http://localhost/prestashop/api/combinations/37"/>
+        <combination id="38" xlink:href="http://localhost/prestashop/api/combinations/38"/>
+        <combination id="39" xlink:href="http://localhost/prestashop/api/combinations/39"/>
+        </combinations>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/combinations/1
+    " 
+        <prestashop>
+        <combination>
+        <id>1</id>
+        <id_product xlink:href="http://localhost/prestashop/api/products/1">1</id_product>
+        <ean13></ean13>
+        <isbn></isbn>
+        <upc></upc>
+        <mpn></mpn>
+        <reference>demo_1</reference>
+        <supplier_reference></supplier_reference>
+        <wholesale_price>0.000000</wholesale_price>
+        <price>0.000000</price>
+        <ecotax>0.000000</ecotax>
+        <weight>0.000000</weight>
+        <unit_price_impact>0.000000</unit_price_impact>
+        <minimal_quantity>1</minimal_quantity>
+        <low_stock_threshold>0</low_stock_threshold>
+        <low_stock_alert>0</low_stock_alert>
+        <default_on>1</default_on>
+        <available_date>0000-00-00</available_date>
+        <available_now>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </available_now>
+        <available_later>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1"></language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2"></language>
+        </available_later>
+        <associations>
+        </associations>
+        </combination>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/stock_availables:
+    "
+        <prestashop>
+        <stock_availables>
+        <stock_available id="1" xlink:href="http://localhost/prestashop/api/stock_availables/1"/>
+        <stock_available id="2" xlink:href="http://localhost/prestashop/api/stock_availables/2"/>
+        <stock_available id="3" xlink:href="http://localhost/prestashop/api/stock_availables/3"/>
+        <stock_available id="4" xlink:href="http://localhost/prestashop/api/stock_availables/4"/>
+        <stock_available id="5" xlink:href="http://localhost/prestashop/api/stock_availables/5"/>
+        <stock_available id="6" xlink:href="http://localhost/prestashop/api/stock_availables/6"/>
+        <stock_available id="7" xlink:href="http://localhost/prestashop/api/stock_availables/7"/>
+        <stock_available id="8" xlink:href="http://localhost/prestashop/api/stock_availables/8"/>
+        <stock_available id="9" xlink:href="http://localhost/prestashop/api/stock_availables/9"/>
+        <stock_available id="10" xlink:href="http://localhost/prestashop/api/stock_availables/10"/>
+        <stock_available id="11" xlink:href="http://localhost/prestashop/api/stock_availables/11"/>
+        <stock_available id="12" xlink:href="http://localhost/prestashop/api/stock_availables/12"/>
+        <stock_available id="13" xlink:href="http://localhost/prestashop/api/stock_availables/13"/>
+        <stock_available id="14" xlink:href="http://localhost/prestashop/api/stock_availables/14"/>
+        <stock_available id="15" xlink:href="http://localhost/prestashop/api/stock_availables/15"/>
+        <stock_available id="16" xlink:href="http://localhost/prestashop/api/stock_availables/16"/>
+        <stock_available id="17" xlink:href="http://localhost/prestashop/api/stock_availables/17"/>
+        <stock_available id="18" xlink:href="http://localhost/prestashop/api/stock_availables/18"/>
+        <stock_available id="19" xlink:href="http://localhost/prestashop/api/stock_availables/19"/>
+        <stock_available id="20" xlink:href="http://localhost/prestashop/api/stock_availables/20"/>
+        <stock_available id="21" xlink:href="http://localhost/prestashop/api/stock_availables/21"/>
+        <stock_available id="22" xlink:href="http://localhost/prestashop/api/stock_availables/22"/>
+        <stock_available id="23" xlink:href="http://localhost/prestashop/api/stock_availables/23"/>
+        <stock_available id="24" xlink:href="http://localhost/prestashop/api/stock_availables/24"/>
+        <stock_available id="25" xlink:href="http://localhost/prestashop/api/stock_availables/25"/>
+        <stock_available id="26" xlink:href="http://localhost/prestashop/api/stock_availables/26"/>
+        <stock_available id="27" xlink:href="http://localhost/prestashop/api/stock_availables/27"/>
+        <stock_available id="28" xlink:href="http://localhost/prestashop/api/stock_availables/28"/>
+        <stock_available id="29" xlink:href="http://localhost/prestashop/api/stock_availables/29"/>
+        <stock_available id="30" xlink:href="http://localhost/prestashop/api/stock_availables/30"/>
+        <stock_available id="31" xlink:href="http://localhost/prestashop/api/stock_availables/31"/>
+        <stock_available id="32" xlink:href="http://localhost/prestashop/api/stock_availables/32"/>
+        <stock_available id="33" xlink:href="http://localhost/prestashop/api/stock_availables/33"/>
+        <stock_available id="34" xlink:href="http://localhost/prestashop/api/stock_availables/34"/>
+        <stock_available id="35" xlink:href="http://localhost/prestashop/api/stock_availables/35"/>
+        <stock_available id="36" xlink:href="http://localhost/prestashop/api/stock_availables/36"/>
+        <stock_available id="37" xlink:href="http://localhost/prestashop/api/stock_availables/37"/>
+        <stock_available id="38" xlink:href="http://localhost/prestashop/api/stock_availables/38"/>
+        <stock_available id="39" xlink:href="http://localhost/prestashop/api/stock_availables/39"/>
+        <stock_available id="40" xlink:href="http://localhost/prestashop/api/stock_availables/40"/>
+        <stock_available id="41" xlink:href="http://localhost/prestashop/api/stock_availables/41"/>
+        <stock_available id="42" xlink:href="http://localhost/prestashop/api/stock_availables/42"/>
+        <stock_available id="43" xlink:href="http://localhost/prestashop/api/stock_availables/43"/>
+        <stock_available id="44" xlink:href="http://localhost/prestashop/api/stock_availables/44"/>
+        <stock_available id="45" xlink:href="http://localhost/prestashop/api/stock_availables/45"/>
+        <stock_available id="46" xlink:href="http://localhost/prestashop/api/stock_availables/46"/>
+        <stock_available id="47" xlink:href="http://localhost/prestashop/api/stock_availables/47"/>
+        <stock_available id="48" xlink:href="http://localhost/prestashop/api/stock_availables/48"/>
+        <stock_available id="49" xlink:href="http://localhost/prestashop/api/stock_availables/49"/>
+        <stock_available id="50" xlink:href="http://localhost/prestashop/api/stock_availables/50"/>
+        <stock_available id="51" xlink:href="http://localhost/prestashop/api/stock_availables/51"/>
+        <stock_available id="52" xlink:href="http://localhost/prestashop/api/stock_availables/52"/>
+        <stock_available id="53" xlink:href="http://localhost/prestashop/api/stock_availables/53"/>
+        <stock_available id="54" xlink:href="http://localhost/prestashop/api/stock_availables/54"/>
+        <stock_available id="55" xlink:href="http://localhost/prestashop/api/stock_availables/55"/>
+        <stock_available id="56" xlink:href="http://localhost/prestashop/api/stock_availables/56"/>
+        <stock_available id="57" xlink:href="http://localhost/prestashop/api/stock_availables/57"/>
+        <stock_available id="58" xlink:href="http://localhost/prestashop/api/stock_availables/58"/>
+        <stock_available id="59" xlink:href="http://localhost/prestashop/api/stock_availables/59"/>
+        <stock_available id="61" xlink:href="http://localhost/prestashop/api/stock_availables/61"/>
+        </stock_availables>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/stock_availables/1:
+    "
+        <prestashop>
+        <stock_available>
+        <id>1</id>
+        <id_product xlink:href="http://localhost/prestashop/api/products/1">1</id_product>
+        <id_product_attribute>0</id_product_attribute>
+        <id_shop xlink:href="http://localhost/prestashop/api/shops/1">1</id_shop>
+        <id_shop_group>0</id_shop_group>
+        <quantity>2400</quantity>
+        <depends_on_stock>0</depends_on_stock>
+        <out_of_stock>2</out_of_stock>
+        <location></location>
+        </stock_available>
+        </prestashop>
+    "
+-http://localhost/prestashop/api/tax_rule_groups:
+    "
+        <prestashop>
+        <tax_rule_groups>
+        <tax_rule_group id="1" xlink:href="http://localhost/prestashop/api/tax_rule_groups/1"/>
+        </tax_rule_groups>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/tax_rule_groups/1:
+    "
+        <prestashop>
+        <tax_rule_group>
+        <id>1</id>
+        <name>MG Standard Rate (20%)</name>
+        <active>1</active>
+        <deleted>0</deleted>
+        <date_add>2026-05-07 09:49:47</date_add>
+        <date_upd>2026-05-07 09:49:47</date_upd>
+        </tax_rule_group>
+        </prestashop>
+    "
+-http://localhost/prestashop/api/product_features:
+    "
+        <prestashop>
+        <product_features>
+        <product_feature id="1" xlink:href="http://localhost/prestashop/api/product_features/1"/>
+        <product_feature id="2" xlink:href="http://localhost/prestashop/api/product_features/2"/>
+        </product_features>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/product_features/1:
+    "
+        <prestashop>
+        <product_feature>
+        <id>1</id>
+        <position>0</position>
+        <name>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">Composition</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">Compositions</language>
+        </name>
+        </product_feature>
+        </prestashop>
+    "
+
+_________________________________________________________________________________________________________________________________________
+
+Suite API Xml:
+
+-http://localhost/prestashop/api/customers:
+    "
+        <prestashop>
+        <customers>
+        <customer id="1" xlink:href="http://localhost/prestashop/api/customers/1"/>
+        <customer id="2" xlink:href="http://localhost/prestashop/api/customers/2"/>
+        </customers>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/customers/1:
+    "
+        <prestashop>
+        <customer>
+        <id>1</id>
+        <id_default_group xlink:href="http://localhost/prestashop/api/groups/3">3</id_default_group>
+        <id_lang xlink:href="http://localhost/prestashop/api/languages/1">1</id_lang>
+        <newsletter_date_add>0000-00-00 00:00:00</newsletter_date_add>
+        <ip_registration_newsletter></ip_registration_newsletter>
+        <last_passwd_gen>2026-05-07 03:50:28</last_passwd_gen>
+        <secure_key>9bd422b5699050e632e14bb9671f5aed</secure_key>
+        <deleted>0</deleted>
+        <passwd>
+        $2y$10$c7xumtCbI.6ao1F1SdIkI.Q5MESK8.XrS4sPH8HXwTcS3/8fDx6dy
+        </passwd>
+        <lastname>Anonymous</lastname>
+        <firstname>Anonymous</firstname>
+        <email>anonymous@psgdpr.com</email>
+        <id_gender>1</id_gender>
+        <birthday>0000-00-00</birthday>
+        <newsletter>0</newsletter>
+        <optin>0</optin>
+        <website></website>
+        <company></company>
+        <siret></siret>
+        <ape></ape>
+        <outstanding_allow_amount>0.000000</outstanding_allow_amount>
+        <show_public_prices>0</show_public_prices>
+        <id_risk>0</id_risk>
+        <max_payment_days>0</max_payment_days>
+        <active>0</active>
+        <note></note>
+        <is_guest>0</is_guest>
+        <id_shop>1</id_shop>
+        <id_shop_group>1</id_shop_group>
+        <date_add>2026-05-07 09:50:28</date_add>
+        <date_upd>2026-05-07 09:50:28</date_upd>
+        <reset_password_token></reset_password_token>
+        <reset_password_validity>0000-00-00 00:00:00</reset_password_validity>
+        <associations>
+        <groups nodeType="group" api="groups">
+        <group xlink:href="http://localhost/prestashop/api/groups/3">
+        <id>3</id>
+        </group>
+        </groups>
+        </associations>
+        </customer>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/orders:
+    "
+        <prestashop>
+        <orders>
+        <order id="1" xlink:href="http://localhost/prestashop/api/orders/1"/>
+        <order id="2" xlink:href="http://localhost/prestashop/api/orders/2"/>
+        <order id="3" xlink:href="http://localhost/prestashop/api/orders/3"/>
+        <order id="4" xlink:href="http://localhost/prestashop/api/orders/4"/>
+        <order id="5" xlink:href="http://localhost/prestashop/api/orders/5"/>
+        </orders>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/orders/1:
+    "
+        <prestashop>
+        <order>
+        <id>1</id>
+        <id_address_delivery xlink:href="http://localhost/prestashop/api/addresses/5">5</id_address_delivery>
+        <id_address_invoice xlink:href="http://localhost/prestashop/api/addresses/5">5</id_address_invoice>
+        <id_cart xlink:href="http://localhost/prestashop/api/carts/1">1</id_cart>
+        <id_currency xlink:href="http://localhost/prestashop/api/currencies/1">1</id_currency>
+        <id_lang xlink:href="http://localhost/prestashop/api/languages/1">1</id_lang>
+        <id_customer xlink:href="http://localhost/prestashop/api/customers/2">2</id_customer>
+        <id_carrier xlink:href="http://localhost/prestashop/api/carriers/2">2</id_carrier>
+        <current_state xlink:href="http://localhost/prestashop/api/order_states/6">6</current_state>
+        <module>ps_checkpayment</module>
+        <invoice_number>0</invoice_number>
+        <invoice_date>0000-00-00 00:00:00</invoice_date>
+        <delivery_number>0</delivery_number>
+        <delivery_date>0000-00-00 00:00:00</delivery_date>
+        <valid>0</valid>
+        <date_add>2026-05-07 09:52:03</date_add>
+        <date_upd>2026-05-07 09:52:03</date_upd>
+        <shipping_number notFilterable="true"></shipping_number>
+        <note>Test</note>
+        <id_shop_group>1</id_shop_group>
+        <id_shop>1</id_shop>
+        <secure_key>b44a6d9efd7a0076a0fbce6b15eaf3b1</secure_key>
+        <payment>Payment by check</payment>
+        <recyclable>0</recyclable>
+        <gift>0</gift>
+        <gift_message></gift_message>
+        <mobile_theme>0</mobile_theme>
+        <total_discounts>0.000000</total_discounts>
+        <total_discounts_tax_incl>0.000000</total_discounts_tax_incl>
+        <total_discounts_tax_excl>0.000000</total_discounts_tax_excl>
+        <total_paid>61.800000</total_paid>
+        <total_paid_tax_incl>68.200000</total_paid_tax_incl>
+        <total_paid_tax_excl>66.800000</total_paid_tax_excl>
+        <total_paid_real>0.000000</total_paid_real>
+        <total_products>59.800000</total_products>
+        <total_products_wt>59.800000</total_products_wt>
+        <total_shipping>7.000000</total_shipping>
+        <total_shipping_tax_incl>8.400000</total_shipping_tax_incl>
+        <total_shipping_tax_excl>7.000000</total_shipping_tax_excl>
+        <carrier_tax_rate>0.000</carrier_tax_rate>
+        <total_wrapping>0.000000</total_wrapping>
+        <total_wrapping_tax_incl>0.000000</total_wrapping_tax_incl>
+        <total_wrapping_tax_excl>0.000000</total_wrapping_tax_excl>
+        <round_mode>0</round_mode>
+        <round_type>0</round_type>
+        <conversion_rate>1.000000</conversion_rate>
+        <reference>XKBKNABJK</reference>
+        <associations>
+        <order_rows nodeType="order_row" virtualEntity="true">
+        <order_row>
+        <id>1</id>
+        <product_id xlink:href="http://localhost/prestashop/api/products/1">1</product_id>
+        <product_attribute_id>1</product_attribute_id>
+        <product_quantity>1</product_quantity>
+        <product_name>
+        Hummingbird printed t-shirt - Color : White, Size : S
+        </product_name>
+        <product_reference>demo_1</product_reference>
+        <product_ean13></product_ean13>
+        <product_isbn></product_isbn>
+        <product_upc></product_upc>
+        <product_price>23.900000</product_price>
+        <id_customization xlink:href="http://localhost/prestashop/api/customizations/0">0</id_customization>
+        <unit_price_tax_incl>23.900000</unit_price_tax_incl>
+        <unit_price_tax_excl>23.900000</unit_price_tax_excl>
+        </order_row>
+        <order_row>
+        <id>2</id>
+        <product_id xlink:href="http://localhost/prestashop/api/products/2">2</product_id>
+        <product_attribute_id>9</product_attribute_id>
+        <product_quantity>1</product_quantity>
+        <product_name>
+        Hummingbird printed sweater - Color : White, Size : S
+        </product_name>
+        <product_reference>demo_3</product_reference>
+        <product_ean13></product_ean13>
+        <product_isbn></product_isbn>
+        <product_upc></product_upc>
+        <product_price>35.900000</product_price>
+        <id_customization xlink:href="http://localhost/prestashop/api/customizations/0">0</id_customization>
+        <unit_price_tax_incl>35.900000</unit_price_tax_incl>
+        <unit_price_tax_excl>35.900000</unit_price_tax_excl>
+        </order_row>
+        </order_rows>
+        </associations>
+        </order>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/order_states:
+    "
+        <prestashop>
+        <order_states>
+        <order_state id="2" xlink:href="http://localhost/prestashop/api/order_states/2"/>
+        <order_state id="3" xlink:href="http://localhost/prestashop/api/order_states/3"/>
+        <order_state id="4" xlink:href="http://localhost/prestashop/api/order_states/4"/>
+        <order_state id="5" xlink:href="http://localhost/prestashop/api/order_states/5"/>
+        <order_state id="6" xlink:href="http://localhost/prestashop/api/order_states/6"/>
+        <order_state id="7" xlink:href="http://localhost/prestashop/api/order_states/7"/>
+        <order_state id="8" xlink:href="http://localhost/prestashop/api/order_states/8"/>
+        <order_state id="9" xlink:href="http://localhost/prestashop/api/order_states/9"/>
+        <order_state id="11" xlink:href="http://localhost/prestashop/api/order_states/11"/>
+        <order_state id="12" xlink:href="http://localhost/prestashop/api/order_states/12"/>
+        <order_state id="13" xlink:href="http://localhost/prestashop/api/order_states/13"/>
+        <order_state id="14" xlink:href="http://localhost/prestashop/api/order_states/14"/>
+        <order_state id="15" xlink:href="http://localhost/prestashop/api/order_states/15"/>
+        <order_state id="16" xlink:href="http://localhost/prestashop/api/order_states/16"/>
+        <order_state id="17" xlink:href="http://localhost/prestashop/api/order_states/17"/>
+        <order_state id="1" xlink:href="http://localhost/prestashop/api/order_states/1"/>
+        <order_state id="10" xlink:href="http://localhost/prestashop/api/order_states/10"/>
+        </order_states>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/order_states/1:
+    "
+        <prestashop>
+        <order_state>
+        <id>1</id>
+        <unremovable>1</unremovable>
+        <delivery>0</delivery>
+        <hidden>0</hidden>
+        <send_email>1</send_email>
+        <module_name>ps_checkpayment</module_name>
+        <invoice>0</invoice>
+        <color>#34209E</color>
+        <logable>0</logable>
+        <shipped>0</shipped>
+        <paid>0</paid>
+        <pdf_delivery>0</pdf_delivery>
+        <pdf_invoice>0</pdf_invoice>
+        <deleted>0</deleted>
+        <name>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">En attente du paiement par chèque</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">Awaiting check payment</language>
+        </name>
+        <template>
+        <language id="1" xlink:href="http://localhost/prestashop/api/languages/1">cheque</language>
+        <language id="2" xlink:href="http://localhost/prestashop/api/languages/2">cheque</language>
+        </template>
+        </order_state>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/carts:
+    "
+        <prestashop>
+        <carts>
+        <cart id="1" xlink:href="http://localhost/prestashop/api/carts/1"/>
+        <cart id="2" xlink:href="http://localhost/prestashop/api/carts/2"/>
+        <cart id="3" xlink:href="http://localhost/prestashop/api/carts/3"/>
+        <cart id="4" xlink:href="http://localhost/prestashop/api/carts/4"/>
+        <cart id="5" xlink:href="http://localhost/prestashop/api/carts/5"/>
+        </carts>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/carts/1:
+    "
+        <prestashop>
+        <cart>
+        <id>1</id>
+        <id_address_delivery xlink:href="http://localhost/prestashop/api/addresses/5">5</id_address_delivery>
+        <id_address_invoice xlink:href="http://localhost/prestashop/api/addresses/5">5</id_address_invoice>
+        <id_currency xlink:href="http://localhost/prestashop/api/currencies/1">1</id_currency>
+        <id_customer xlink:href="http://localhost/prestashop/api/customers/2">2</id_customer>
+        <id_guest xlink:href="http://localhost/prestashop/api/guests/1">1</id_guest>
+        <id_lang xlink:href="http://localhost/prestashop/api/languages/1">1</id_lang>
+        <id_shop_group>1</id_shop_group>
+        <id_shop>1</id_shop>
+        <id_carrier>2</id_carrier>
+        <recyclable>0</recyclable>
+        <gift>0</gift>
+        <gift_message></gift_message>
+        <mobile_theme>0</mobile_theme>
+        <delivery_option>{"3":"2,"}</delivery_option>
+        <secure_key>b44a6d9efd7a0076a0fbce6b15eaf3b1</secure_key>
+        <allow_seperated_package>0</allow_seperated_package>
+        <date_add>2026-05-07 09:52:01</date_add>
+        <date_upd>2026-05-07 09:52:01</date_upd>
+        <associations>
+        <cart_rows nodeType="cart_row" virtualEntity="true">
+        <cart_row>
+        <id_product xlink:href="http://localhost/prestashop/api/products/1">1</id_product>
+        <id_product_attribute xlink:href="http://localhost/prestashop/api/combinations/1">1</id_product_attribute>
+        <id_address_delivery xlink:href="http://localhost/prestashop/api/addresses/3">3</id_address_delivery>
+        <id_customization xlink:href="http://localhost/prestashop/api/customizations/0">0</id_customization>
+        <quantity>1</quantity>
+        </cart_row>
+        <cart_row>
+        <id_product xlink:href="http://localhost/prestashop/api/products/2">2</id_product>
+        <id_product_attribute xlink:href="http://localhost/prestashop/api/combinations/9">9</id_product_attribute>
+        <id_address_delivery xlink:href="http://localhost/prestashop/api/addresses/3">3</id_address_delivery>
+        <id_customization xlink:href="http://localhost/prestashop/api/customizations/0">0</id_customization>
+        <quantity>1</quantity>
+        </cart_row>
+        </cart_rows>
+        </associations>
+        </cart>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/addresses:
+    "
+        <prestashop>
+        <addresses>
+        <address id="3" xlink:href="http://localhost/prestashop/api/addresses/3"/>
+        <address id="4" xlink:href="http://localhost/prestashop/api/addresses/4"/>
+        <address id="6" xlink:href="http://localhost/prestashop/api/addresses/6"/>
+        <address id="1" xlink:href="http://localhost/prestashop/api/addresses/1"/>
+        <address id="2" xlink:href="http://localhost/prestashop/api/addresses/2"/>
+        <address id="5" xlink:href="http://localhost/prestashop/api/addresses/5"/>
+        </addresses>
+        </prestashop>
+    "
+
+-http://localhost/prestashop/api/addresses/1:
+    "
+        <prestashop>
+        <address>
+        <id>1</id>
+        <id_customer xlink:href="http://localhost/prestashop/api/customers/1">1</id_customer>
+        <id_manufacturer>0</id_manufacturer>
+        <id_supplier>0</id_supplier>
+        <id_warehouse>0</id_warehouse>
+        <id_country xlink:href="http://localhost/prestashop/api/countries/133">133</id_country>
+        <id_state>0</id_state>
+        <alias>Anonymous</alias>
+        <company>Anonymous</company>
+        <lastname>Anonymous</lastname>
+        <firstname>Anonymous</firstname>
+        <vat_number>0000</vat_number>
+        <address1>Anonymous</address1>
+        <address2></address2>
+        <postcode>00000</postcode>
+        <city>Anonymous</city>
+        <other></other>
+        <phone>0000000000</phone>
+        <phone_mobile>0000000000</phone_mobile>
+        <dni>0000</dni>
+        <deleted>0</deleted>
+        <date_add>2026-05-07 09:50:28</date_add>
+        <date_upd>2026-05-07 09:50:28</date_upd>
+        </address>
+        </prestashop>
+    "
