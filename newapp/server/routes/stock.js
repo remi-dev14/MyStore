@@ -90,17 +90,7 @@ router.post('/add', async (req, res) => {
     const { productId, delta, productAttributeId, applyToAll } = req.body;
     if (!productId || delta === undefined) return res.status(400).json({ error: 'productId and delta required' });
 
-    const pid = parseInt(productId, 10);
     const intDelta = parseInt(delta, 10);
-
-    if(!pid || pid <= 0) return res.status(400).json({ error: 'productId invalide'});
-    if(isNaN(intDelta)) return res.status(400).json({ error: 'Delta dois etre un entier'});
-    if(intDelta === 0) return res.status(400).json({ error: 'Delta ne peut pas etre 0'});
-    if(!pid || pid <= 0) return res.status(400).json({ error: 'Delta trop grand'});
-
-    const attrId = parseInt(productAttributeId || '0', 10);
-    if(isNaN(attrId) || attrId < 0) return res.status(400).json({ error: 'productAttributeId invalide'});
-
 
     if (applyToAll) {
       const list = await getAllStockAvailables(productId);
@@ -240,8 +230,11 @@ router.post('/remove-by-category', async (req, res) => {
       for (const sa of entries) {
         const saAttr = scalar(sa.id_product_attribute, '0');
         const oldQty = parseInt(scalar(sa.quantity, '0'), 10);
-        const removed = oldQty > n ? n : oldQty;
-        const newQty = oldQty - removed;
+        // On ne peut retirer que ce qui est disponible : jamais en dessous de 0,
+        // donc removed est borné à [0, max(0, oldQty)] et newQty reste >= 0.
+        const available = Math.max(0, oldQty);
+        const removed = Math.min(n, available);
+        const newQty = Math.max(0, oldQty - removed);
         productOldTotal += oldQty;
         productNewTotal += newQty;
         productRemoved += removed;
@@ -276,7 +269,115 @@ router.post('/remove-by-category', async (req, res) => {
     }
 
     saveHistory(history);
-    res.json({ success: true, categoryId, categoryName, requested: n, totalRemoved, details });
+    res.json({ success: true, action: 'remove', categoryId, categoryName, requested: n, totalApplied: totalRemoved, details });
+  } catch (err) {
+    res.status(500).json({ error: err.message, detail: err.response?.data ?? null });
+  }
+});
+
+router.post('/add-by-category', async (req, res) => {
+  try {
+    const { categoryId, quantity, limit } = req.body;
+    if (!categoryId || quantity === undefined) {
+      return res.status(400).json({ error: 'categoryId et quantity requis' });
+    }
+    const n = parseInt(quantity, 10);
+    if (!Number.isFinite(n) || n <= 0) {
+      return res.status(400).json({ error: 'La quantité doit être positive' });
+    }
+    // limit : null | '' | undefined → pas de limite. Sinon entier >= 0.
+    const hasLimit = limit !== undefined && limit !== null && String(limit).trim() !== '';
+    const maxLimit = hasLimit ? parseInt(limit, 10) : null;
+    if (hasLimit && (!Number.isFinite(maxLimit) || maxLimit < 0)) {
+      return res.status(400).json({ error: 'La limite doit être un entier positif ou vide' });
+    }
+
+    const products = await getProductsByCategory(categoryId);
+    if (!products.length) return res.status(404).json({ error: 'Aucun produit dans cette catégorie' });
+
+    const categoryName = await getCategoryName(categoryId);
+    const history = loadHistory();
+    const details = [];
+    let totalAdded = 0;
+
+    for (const p of products) {
+      const pid = String(p.id);
+      const productName = (() => {
+        const f = p.name;
+        if (!f) return `Produit #${pid}`;
+        const langs = f.language;
+        const arr = Array.isArray(langs) ? langs : [langs].filter(Boolean);
+        const m = arr.find((l) => String(l.id) === '1') ?? arr[0];
+        return m?._ ?? `Produit #${pid}`;
+      })();
+
+      const stockEntries = await getAllStockAvailables(pid);
+      const combEntries = stockEntries.filter((s) => scalar(s.id_product_attribute, '0') !== '0');
+      const entries = combEntries.length > 0 ? combEntries : stockEntries;
+
+      let productAdded = 0;
+      let productOldTotal = 0;
+      let productNewTotal = 0;
+
+      for (const sa of entries) {
+        const saAttr = scalar(sa.id_product_attribute, '0');
+        const oldQty = parseInt(scalar(sa.quantity, '0'), 10);
+        // Limite n : on ne peut pas dépasser n. Si oldQty >= maxLimit, on n'ajoute rien.
+        // Sinon, on ajoute min(quantity, maxLimit - oldQty).
+        let added;
+        if (maxLimit === null) {
+          added = n;
+        } else if (oldQty >= maxLimit) {
+          added = 0;
+        } else {
+          added = Math.min(n, maxLimit - oldQty);
+        }
+        added = Math.max(0, added);
+        const newQty = oldQty + added;
+        productOldTotal += oldQty;
+        productNewTotal += newQty;
+        productAdded += added;
+
+        if (added > 0) {
+          await setStock(pid, saAttr, newQty);
+          try {
+            await insertStockMovement(pid, saAttr, added, 1);
+          } catch (e) {
+            console.error(`[stock/mvt add-cat] pid=${pid} attr=${saAttr}: ${e.message}`);
+          }
+          history.push({
+            date: new Date().toISOString().split('T')[0],
+            productId: pid,
+            id_product_attribute: saAttr,
+            delta: added,
+            oldQty,
+            newQty,
+            reason: `Ajout catégorie ${categoryName || categoryId}${maxLimit !== null ? ` (limite ${maxLimit})` : ''}`,
+          });
+        }
+      }
+
+      details.push({
+        productId: pid,
+        productName,
+        oldQty: productOldTotal,
+        newQty: productNewTotal,
+        added: productAdded,
+      });
+      totalAdded += productAdded;
+    }
+
+    saveHistory(history);
+    res.json({
+      success: true,
+      action: 'add',
+      categoryId,
+      categoryName,
+      requested: n,
+      limit: maxLimit,
+      totalApplied: totalAdded,
+      details,
+    });
   } catch (err) {
     res.status(500).json({ error: err.message, detail: err.response?.data ?? null });
   }
