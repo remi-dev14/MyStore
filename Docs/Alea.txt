@@ -1,0 +1,14 @@
+Alea 1: Case a cocher importer photo(si case cocher photo sera importer, si non photo ne)
+page: cree case a cocher dans import page.jsx
+integration: La case a cocher fera office de choix pour import des images ou non
+
+Alea 2: 
+    1-commande etat visible , duplication commande
+    2-commande client => panier qui peut dupliquer commande 
+    3-page validation commande:
+    4-Etat validation commande: Livrer
+
+    1-Possibiliter de dupliquer n fois commande pour frontoffice (my-orders): 
+        1.1-ajout dans bouton dupliquer qui affichera un truc pour entrer le nombre de duplication(par defaut 1);
+        1.2-integration duplication commande: si commande duplique reprendre les memes produits de la commande et les memes quantités. mais reference de la commande differente, commande dupliquer sera par defaut en etat payment effectuer
+    2-Page validation commande: affichera details commande sur clique d'une ligne de commande. Dans page validation commande le client peut valider que commande livrer

@@ -62,11 +62,21 @@ async function setStock(productId, attrId, quantity) {
   return resp.data;
 }
 
-// Insert a stock_mvt record (sign=+1) via mon_order_state module
-async function insertStockMovement(productId, attrId, quantity) {
+// Insert a stock_mvt record via mon_order_state module.
+// Accepts a signed quantity; positive = entrée (sign=+1), negative = sortie (sign=-1).
+
+// insertion mvt stock depuis stock service, function insertStockMvt(productId, attrId, quantity, sign, idOrder = 0)
+async function insertStockMovement(productId, attrId, quantity, sign) {
+  const finalSign = sign ?? (quantity >= 0 ? 1 : -1);
+  const finalQty = Math.abs(parseInt(quantity, 10));
   const resp = await axios.post(
     STOCK_MOVEMENT_URL,
-    { id_product: parseInt(productId, 10), id_product_attribute: parseInt(attrId || '0', 10), quantity },
+    {
+      id_product: parseInt(productId, 10),
+      id_product_attribute: parseInt(attrId || '0', 10),
+      quantity: finalQty,
+      sign: finalSign,
+    },
     { auth, headers: { 'Content-Type': 'application/json' }, responseType: 'text' }
   );
   const raw = resp.data || '';
@@ -155,6 +165,113 @@ router.get('/history/:productId', (req, res) => {
   const history = loadHistory();
   const filtered = history.filter((h) => String(h.productId) === String(req.params.productId));
   res.json(filtered);
+});
+
+async function getProductsByCategory(categoryId) {
+  const res = await axios.get(`${PRESTA_URL}/products`, {
+    auth,
+    params: { display: 'full', 'filter[id_category_default]': categoryId, output_format: 'XML' },
+    responseType: 'text',
+  });
+  const parsed = await parseStringPromise(res.data, { explicitArray: false, mergeAttrs: true });
+  const raw = parsed?.prestashop?.products?.product;
+  return raw ? (Array.isArray(raw) ? raw : [raw]) : [];
+}
+
+async function getCategoryName(categoryId) {
+  try {
+    const res = await axios.get(`${PRESTA_URL}/categories/${categoryId}`, {
+      auth, params: { output_format: 'XML' }, responseType: 'text',
+    });
+    const parsed = await parseStringPromise(res.data, { explicitArray: false, mergeAttrs: true });
+    const nameField = parsed?.prestashop?.category?.name;
+    if (!nameField) return '';
+    const langs = nameField.language;
+    const arr = Array.isArray(langs) ? langs : [langs].filter(Boolean);
+    const m = arr.find((l) => String(l.id) === '1') ?? arr[0];
+    return m?._ ?? '';
+  } catch { return ''; }
+}
+
+router.post('/remove-by-category', async (req, res) => {
+  try {
+    const { categoryId, quantity } = req.body;
+    if (!categoryId || quantity === undefined) {
+      return res.status(400).json({ error: 'categoryId et quantity requis' });
+    }
+    const n = Math.max(0, parseInt(quantity, 10) || 0);
+    if (n <= 0) return res.status(400).json({ error: 'La quantité doit être positive' });
+
+    const products = await getProductsByCategory(categoryId);
+    if (!products.length) return res.status(404).json({ error: 'Aucun produit dans cette catégorie' });
+
+    const categoryName = await getCategoryName(categoryId);
+    const history = loadHistory();
+    const details = [];
+    let totalRemoved = 0;
+
+    for (const p of products) {
+      const pid = String(p.id);
+      const productName = (() => {
+        const f = p.name;
+        if (!f) return `Produit #${pid}`;
+        const langs = f.language;
+        const arr = Array.isArray(langs) ? langs : [langs].filter(Boolean);
+        const m = arr.find((l) => String(l.id) === '1') ?? arr[0];
+        return m?._ ?? `Produit #${pid}`;
+      })();
+
+      const stockEntries = await getAllStockAvailables(pid);
+      const combEntries = stockEntries.filter((s) => scalar(s.id_product_attribute, '0') !== '0');
+      const entries = combEntries.length > 0 ? combEntries : stockEntries;
+
+      let productRemoved = 0;
+      let productOldTotal = 0;
+      let productNewTotal = 0;
+
+      for (const sa of entries) {
+        const saAttr = scalar(sa.id_product_attribute, '0');
+        const oldQty = parseInt(scalar(sa.quantity, '0'), 10);
+        const removed = oldQty > n ? n : oldQty;
+        const newQty = oldQty - removed;
+        productOldTotal += oldQty;
+        productNewTotal += newQty;
+        productRemoved += removed;
+
+        if (removed > 0) {
+          await setStock(pid, saAttr, newQty);
+          try {
+            await insertStockMovement(pid, saAttr, removed, -1);
+          } catch (e) {
+            console.error(`[stock/mvt remove] pid=${pid} attr=${saAttr}: ${e.message}`);
+          }
+          history.push({
+            date: new Date().toISOString().split('T')[0],
+            productId: pid,
+            id_product_attribute: saAttr,
+            delta: -removed,
+            oldQty,
+            newQty,
+            reason: `Retrait catégorie ${categoryName || categoryId}`,
+          });
+        }
+      }
+
+      details.push({
+        productId: pid,
+        productName,
+        oldQty: productOldTotal,
+        newQty: productNewTotal,
+        removed: productRemoved,
+      });
+      totalRemoved += productRemoved;
+    }
+
+    saveHistory(history);
+    res.json({ success: true, categoryId, categoryName, requested: n, totalRemoved, details });
+  } catch (err) {
+    res.status(500).json({ error: err.message, detail: err.response?.data ?? null });
+  }
 });
 
 export default router;

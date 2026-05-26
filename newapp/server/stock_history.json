@@ -1,132 +1,425 @@
 [
   {
-    "date": "2026-05-19",
-    "productId": "143",
-    "id_product_attribute": "79",
-    "delta": 1,
-    "oldQty": 10,
-    "newQty": 11,
-    "reason": "Commande #20"
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "821",
+    "delta": -10,
+    "oldQty": 18,
+    "newQty": 8,
+    "reason": "Retrait catégorie Habillement"
   },
   {
-    "date": "2026-05-19",
-    "productId": "143",
-    "id_product_attribute": "79",
-    "delta": 1,
-    "oldQty": 11,
-    "newQty": 12,
-    "reason": "Commande #20"
-  },
-  {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "144",
-    "delta": -3,
-    "oldQty": 10,
-    "newQty": 7,
-    "reason": "Commande #73"
-  },
-  {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "145",
-    "delta": 2,
-    "oldQty": 7,
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "822",
+    "delta": -10,
+    "oldQty": 19,
     "newQty": 9,
-    "reason": "Commande #71"
+    "reason": "Retrait catégorie Habillement"
   },
   {
-    "date": "2026-05-19",
-    "productId": "177",
-    "id_product_attribute": "0",
-    "delta": 1,
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "823",
+    "delta": -10,
+    "oldQty": 22,
+    "newQty": 12,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "833",
+    "delta": -10,
+    "oldQty": 13,
+    "newQty": 3,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "834",
+    "delta": -10,
+    "oldQty": 35,
+    "newQty": 25,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "835",
+    "delta": -4,
+    "oldQty": 4,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "840",
+    "delta": -5,
+    "oldQty": 5,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "841",
+    "delta": -10,
+    "oldQty": 37,
+    "newQty": 27,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "842",
+    "delta": -10,
+    "oldQty": 36,
+    "newQty": 26,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "852",
+    "delta": -10,
+    "oldQty": 14,
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "853",
+    "delta": -10,
+    "oldQty": 37,
+    "newQty": 27,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "854",
+    "delta": -10,
+    "oldQty": 14,
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "855",
+    "delta": -10,
+    "oldQty": 21,
+    "newQty": 11,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "859",
+    "delta": -10,
+    "oldQty": 41,
+    "newQty": 31,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "860",
+    "delta": -10,
+    "oldQty": 44,
+    "newQty": 34,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "861",
+    "delta": -10,
+    "oldQty": 17,
+    "newQty": 7,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "862",
+    "delta": -10,
+    "oldQty": 14,
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "873",
+    "delta": -10,
+    "oldQty": 41,
+    "newQty": 31,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "874",
+    "delta": -10,
+    "oldQty": 19,
+    "newQty": 9,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "821",
+    "delta": -5,
+    "oldQty": 8,
+    "newQty": 3,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "822",
+    "delta": -5,
     "oldQty": 9,
-    "newQty": 10,
-    "reason": "Commande #71"
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "144",
-    "delta": 3,
-    "oldQty": 10,
-    "newQty": 13,
-    "reason": "Commande #73"
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "823",
+    "delta": -5,
+    "oldQty": 12,
+    "newQty": 7,
+    "reason": "Retrait catégorie Habillement"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "145",
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "833",
+    "delta": -3,
+    "oldQty": 3,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "834",
+    "delta": -5,
+    "oldQty": 25,
+    "newQty": 20,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "841",
+    "delta": -5,
+    "oldQty": 27,
+    "newQty": 22,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "842",
+    "delta": -5,
+    "oldQty": 26,
+    "newQty": 21,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "852",
+    "delta": -4,
+    "oldQty": 4,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "853",
+    "delta": -5,
+    "oldQty": 27,
+    "newQty": 22,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "854",
+    "delta": -4,
+    "oldQty": 4,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "855",
+    "delta": -5,
+    "oldQty": 11,
+    "newQty": 6,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "859",
+    "delta": -5,
+    "oldQty": 31,
+    "newQty": 26,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "860",
+    "delta": -5,
+    "oldQty": 34,
+    "newQty": 29,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "861",
+    "delta": -5,
+    "oldQty": 7,
+    "newQty": 2,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "862",
+    "delta": -4,
+    "oldQty": 4,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "873",
+    "delta": -5,
+    "oldQty": 31,
+    "newQty": 26,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "874",
+    "delta": -5,
+    "oldQty": 9,
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "562",
+    "id_product_attribute": "824",
+    "delta": -1,
+    "oldQty": 23,
+    "newQty": 22,
+    "reason": "Retrait catégorie Électronique"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "562",
+    "id_product_attribute": "825",
+    "delta": -1,
+    "oldQty": 21,
+    "newQty": 20,
+    "reason": "Retrait catégorie Électronique"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "567",
+    "id_product_attribute": "0",
     "delta": -1,
     "oldQty": 9,
     "newQty": 8,
-    "reason": "Commande #72"
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "145",
-    "delta": 1,
-    "oldQty": 8,
-    "newQty": 9,
-    "reason": "Commande #72"
+    "date": "2026-05-26",
+    "productId": "572",
+    "id_product_attribute": "843",
+    "delta": -1,
+    "oldQty": 38,
+    "newQty": 37,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "144",
-    "delta": -3,
-    "oldQty": 10,
-    "newQty": 7,
-    "reason": "Commande #73"
+    "date": "2026-05-26",
+    "productId": "572",
+    "id_product_attribute": "844",
+    "delta": -1,
+    "oldQty": 37,
+    "newQty": 36,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "144",
-    "delta": -3,
-    "oldQty": 7,
-    "newQty": 4,
-    "reason": "Commande #73"
+    "date": "2026-05-26",
+    "productId": "572",
+    "id_product_attribute": "845",
+    "delta": -1,
+    "oldQty": 1,
+    "newQty": 0,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "2",
+    "date": "2026-05-26",
+    "productId": "577",
     "id_product_attribute": "0",
-    "delta": 5,
-    "oldQty": 0,
-    "newQty": 5
+    "delta": -1,
+    "oldQty": 9,
+    "newQty": 8,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "144",
-    "delta": 3,
-    "oldQty": 0,
-    "newQty": 3
+    "date": "2026-05-26",
+    "productId": "582",
+    "id_product_attribute": "863",
+    "delta": -1,
+    "oldQty": 29,
+    "newQty": 28,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "175",
-    "id_product_attribute": "144",
-    "delta": 3,
-    "oldQty": 4,
-    "newQty": 7
+    "date": "2026-05-26",
+    "productId": "582",
+    "id_product_attribute": "864",
+    "delta": -1,
+    "oldQty": 12,
+    "newQty": 11,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "179",
-    "id_product_attribute": "148",
-    "delta": 1,
-    "oldQty": 13,
-    "newQty": 14
+    "date": "2026-05-26",
+    "productId": "582",
+    "id_product_attribute": "865",
+    "delta": -1,
+    "oldQty": 23,
+    "newQty": 22,
+    "reason": "Retrait catégorie Électronique"
   },
   {
-    "date": "2026-05-19",
-    "productId": "179",
-    "id_product_attribute": "149",
-    "delta": 1,
-    "oldQty": 7,
-    "newQty": 8
+    "date": "2026-05-26",
+    "productId": "587",
+    "id_product_attribute": "0",
+    "delta": -1,
+    "oldQty": 35,
+    "newQty": 34,
+    "reason": "Retrait catégorie Électronique"
   }
 ]

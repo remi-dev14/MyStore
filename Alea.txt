@@ -1,0 +1,16 @@
+Remove stock:
+
+-lien redirection vers page remove stock: demande mot de passe admin 
+
+-pop up reusite, echec mot de passe:
+    reussite: afficher categorie et quantiter a enlever
+    echec: mot de passe incorrect
+
+-integration:
+    Choix categorie: Enlever le stock de tout les produits dans la categorie selectionnée
+    Nombre quantiter n: Enlever la quantiter de tout les produits de la categorie selectionnée(si stock > n enlever n si stock <= n stock = 0 ) 
+
+
+-page resumer quantiter a enlever
+    donnée sommes exact des quantiter enlever
+

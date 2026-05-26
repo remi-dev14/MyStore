@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard, Package, Upload, Users, ShoppingCart,
-  Archive, RotateCcw, ChevronRight, Store, BarChart2,
+  Archive, RotateCcw, ChevronRight, Store, BarChart2, PackageMinus,
 } from 'lucide-react';
 import { clsx } from 'clsx';
 
@@ -11,6 +11,7 @@ const NAV = [
   { to: '/admin/orders',    icon: ShoppingCart,     label: 'Commandes' },
   { to: '/admin/carts',     icon: Archive,          label: 'Paniers' },
   { to: '/admin/stock',     icon: Package,          label: 'Stock' },
+  { to: '/admin/stock/remove', icon: PackageMinus,  label: 'Retirer stock' },
   { to: '/admin/stats',     icon: BarChart2,         label: 'Statistiques' },
   { to: '/admin/reset',     icon: RotateCcw,        label: 'Réinitialiser', danger: true },
 ];
