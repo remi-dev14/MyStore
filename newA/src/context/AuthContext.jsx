@@ -7,12 +7,12 @@ const DEFAULT_PWD = import.meta.env.VITE_BO_PWD || 'admin123';
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(
-    () => sessionStorage.getItem('bo_auth') === 'true'
+    () => localStorage.getItem('bo_auth') === 'true'
   );
 
   function login(login, password) {
     if (login === DEFAULT_LOGIN && password === DEFAULT_PWD) {
-      sessionStorage.setItem('bo_auth', 'true');
+      localStorage.setItem('bo_auth', 'true');
       setIsAuthenticated(true);
       return true;
     }
@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
   }
 
   function logout() {
-    sessionStorage.removeItem('bo_auth');
+    localStorage.removeItem('bo_auth');
     setIsAuthenticated(false);
   }
 

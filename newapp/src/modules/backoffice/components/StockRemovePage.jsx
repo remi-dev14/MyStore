@@ -6,12 +6,15 @@ import { Card, CardTitle } from '../../../shared/ui/Card.jsx';
 import { Button } from '../../../shared/ui/Button.jsx';
 import { Table, Thead, Th, Tbody, Tr, Td } from '../../../shared/ui/Table.jsx';
 import { Spinner } from '../../../shared/ui/Spinner.jsx';
-import { Lock, Minus, CheckCircle, AlertCircle, X, ShieldCheck } from 'lucide-react';
+import { Lock, Minus, CheckCircle, AlertCircle, X, ShieldCheck, LockOpen } from 'lucide-react';
+
+const UNLOCK_KEY = 'stock_remove_unlocked';
+const SUMMARY_KEY = 'stock_remove_summary';
 
 export default function StockRemovePage() {
   const { DEFAULT_PWD } = useAuth();
 
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => sessionStorage.getItem(UNLOCK_KEY) === 'true');
   const [pwd, setPwd] = useState('');
   const [popup, setPopup] = useState(null);
 
@@ -21,7 +24,12 @@ export default function StockRemovePage() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [summary, setSummary] = useState(null);
+  const [summary, setSummary] = useState(() => {
+    try {
+      const raw = sessionStorage.getItem(SUMMARY_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+  });
 
   useEffect(() => {
     if (!unlocked) return;
@@ -43,6 +51,7 @@ export default function StockRemovePage() {
       setPopup({ type: 'success', message: 'Mot de passe correct. Accès autorisé.' });
       setTimeout(() => {
         setPopup(null);
+        sessionStorage.setItem(UNLOCK_KEY, 'true');
         setUnlocked(true);
       }, 900);
     } else {
@@ -50,10 +59,19 @@ export default function StockRemovePage() {
     }
   }
 
+  function handleLock() {
+    sessionStorage.removeItem(UNLOCK_KEY);
+    sessionStorage.removeItem(SUMMARY_KEY);
+    setUnlocked(false);
+    setSummary(null);
+    setPwd('');
+  }
+
   async function handleRemove(e) {
     e.preventDefault();
     setError('');
     setSummary(null);
+    sessionStorage.removeItem(SUMMARY_KEY);
     setLoading(true);
     try {
       const res = await api.post('/api/stock/remove-by-category', {
@@ -61,6 +79,7 @@ export default function StockRemovePage() {
         quantity: parseInt(quantity, 10),
       });
       setSummary(res.data);
+      sessionStorage.setItem(SUMMARY_KEY, JSON.stringify(res.data));
     } catch (e) {
       setError(e.response?.data?.error ?? e.message);
     } finally {
@@ -102,7 +121,16 @@ export default function StockRemovePage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-bold text-slate-800">Retirer du stock</h1>
+      <div className="flex items-center gap-4">
+        <h1 className="text-xl font-bold text-slate-800">Retirer du stock</h1>
+        <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2.5 py-1">
+          <LockOpen size={12} /> Déverrouillé
+        </span>
+        <div className="flex-1" />
+        <Button variant="secondary" size="sm" onClick={handleLock}>
+          <Lock size={13} /> Reverrouiller
+        </Button>
+      </div>
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
       <Card>

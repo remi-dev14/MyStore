@@ -96,3 +96,5 @@ export async function insertStockMvt(productId, attrId, quantity, sign, idOrder 
     throw new Error(m ? m[1].replace(/<[^>]+>/g, '').trim() : 'Erreur stock_movement');
   }
 }
+
+

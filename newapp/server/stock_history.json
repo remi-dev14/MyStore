@@ -421,5 +421,230 @@
     "oldQty": 35,
     "newQty": 34,
     "reason": "Retrait catégorie Électronique"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "821",
+    "delta": -2,
+    "oldQty": 3,
+    "newQty": 1,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "822",
+    "delta": -2,
+    "oldQty": 4,
+    "newQty": 2,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "823",
+    "delta": -2,
+    "oldQty": 7,
+    "newQty": 5,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "834",
+    "delta": -2,
+    "oldQty": 20,
+    "newQty": 18,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "841",
+    "delta": -2,
+    "oldQty": 22,
+    "newQty": 20,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "842",
+    "delta": -2,
+    "oldQty": 21,
+    "newQty": 19,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "853",
+    "delta": -2,
+    "oldQty": 22,
+    "newQty": 20,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "855",
+    "delta": -2,
+    "oldQty": 6,
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "859",
+    "delta": -2,
+    "oldQty": 26,
+    "newQty": 24,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "860",
+    "delta": -2,
+    "oldQty": 29,
+    "newQty": 27,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "861",
+    "delta": -2,
+    "oldQty": 2,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "873",
+    "delta": -2,
+    "oldQty": 26,
+    "newQty": 24,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "874",
+    "delta": -2,
+    "oldQty": 4,
+    "newQty": 2,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "821",
+    "delta": -1,
+    "oldQty": 1,
+    "newQty": 0,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "822",
+    "delta": -1,
+    "oldQty": 2,
+    "newQty": 1,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "561",
+    "id_product_attribute": "823",
+    "delta": -1,
+    "oldQty": 5,
+    "newQty": 4,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "566",
+    "id_product_attribute": "834",
+    "delta": -1,
+    "oldQty": 18,
+    "newQty": 17,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "841",
+    "delta": -1,
+    "oldQty": 20,
+    "newQty": 19,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "571",
+    "id_product_attribute": "842",
+    "delta": -1,
+    "oldQty": 19,
+    "newQty": 18,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "853",
+    "delta": -1,
+    "oldQty": 20,
+    "newQty": 19,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "576",
+    "id_product_attribute": "855",
+    "delta": -1,
+    "oldQty": 4,
+    "newQty": 3,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "859",
+    "delta": -1,
+    "oldQty": 24,
+    "newQty": 23,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "581",
+    "id_product_attribute": "860",
+    "delta": -1,
+    "oldQty": 27,
+    "newQty": 26,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "873",
+    "delta": -1,
+    "oldQty": 24,
+    "newQty": 23,
+    "reason": "Retrait catégorie Habillement"
+  },
+  {
+    "date": "2026-05-26",
+    "productId": "586",
+    "id_product_attribute": "874",
+    "delta": -1,
+    "oldQty": 2,
+    "newQty": 1,
+    "reason": "Retrait catégorie Habillement"
   }
 ]
