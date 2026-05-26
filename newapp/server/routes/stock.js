@@ -64,8 +64,6 @@ async function setStock(productId, attrId, quantity) {
 
 // Insert a stock_mvt record via mon_order_state module.
 // Accepts a signed quantity; positive = entrée (sign=+1), negative = sortie (sign=-1).
-
-// insertion mvt stock depuis stock service, function insertStockMvt(productId, attrId, quantity, sign, idOrder = 0)
 async function insertStockMovement(productId, attrId, quantity, sign) {
   const finalSign = sign ?? (quantity >= 0 ? 1 : -1);
   const finalQty = Math.abs(parseInt(quantity, 10));
@@ -92,7 +90,17 @@ router.post('/add', async (req, res) => {
     const { productId, delta, productAttributeId, applyToAll } = req.body;
     if (!productId || delta === undefined) return res.status(400).json({ error: 'productId and delta required' });
 
+    const pid = parseInt(productId, 10);
     const intDelta = parseInt(delta, 10);
+
+    if(!pid || pid <= 0) return res.status(400).json({ error: 'productId invalide'});
+    if(isNaN(intDelta)) return res.status(400).json({ error: 'Delta dois etre un entier'});
+    if(intDelta === 0) return res.status(400).json({ error: 'Delta ne peut pas etre 0'});
+    if(!pid || pid <= 0) return res.status(400).json({ error: 'Delta trop grand'});
+
+    const attrId = parseInt(productAttributeId || '0', 10);
+    if(isNaN(attrId) || attrId < 0) return res.status(400).json({ error: 'productAttributeId invalide'});
+
 
     if (applyToAll) {
       const list = await getAllStockAvailables(productId);
